@@ -1,7 +1,7 @@
 import os
 import sentry_sdk
 
-from bottle import request, route, run
+from bottle import route, run
 from sentry_sdk.integrations.bottle import BottleIntegration
 
 sentry_sdk.init(dsn=os.environ.get("SENTRY_DSN"), integrations=[BottleIntegration()])
